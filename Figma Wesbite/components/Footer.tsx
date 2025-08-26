@@ -35,7 +35,7 @@ export function Footer() {
               <a href="#" className="w-10 h-10 bg-va-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all">
                 <Linkedin className="w-5 h-5 text-white" />
               </a>
-              <a href="mailto:hello@vahorizon.com" className="w-10 h-10 bg-va-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all">
+              <a href="mailto:Youssef@vahorizon.site" className="w-10 h-10 bg-va-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all">
                 <Mail className="w-5 h-5 text-white" />
               </a>
             </div>

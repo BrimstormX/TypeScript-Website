@@ -145,9 +145,14 @@ export function Pricing() {
                   ))}
                 </ul>
                 
-                <Button 
+                <Button
                   className={`w-full ${plan.popular ? 'btn-primary' : 'btn-secondary'}`}
-                  onClick={() => window.open('YOUR_STRIPE_CHECKOUT_LINK', '_blank')}
+                  onClick={() =>
+                    window.open(
+                      "https://calendly.com/youssef-vahorizon/30min",
+                      "_blank"
+                    )
+                  }
                 >
                   {plan.name === 'Add-Ons' ? 'Contact Us' : 'Get Started'}
                 </Button>

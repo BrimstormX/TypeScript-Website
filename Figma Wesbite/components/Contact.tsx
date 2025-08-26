@@ -83,8 +83,10 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-va-navy mb-1">Email</h4>
-                  <p className="text-va-dark">hello@vahorizon.com</p>
-                  <p className="text-sm text-va-dark">We respond within 24 hours</p>
+                  <p className="text-va-dark">Youssef@vahorizon.site</p>
+                  <p className="text-sm text-va-dark">
+                    We respond within a few business hours
+                  </p>
                 </div>
               </div>
 
@@ -98,7 +100,12 @@ export function Contact() {
                   <Button 
                     variant="link" 
                     className="text-va-gold font-semibold p-0 h-auto"
-                    onClick={() => window.open('YOUR_CALENDLY_LINK', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://calendly.com/youssef-vahorizon/30min",
+                        "_blank"
+                      )
+                    }
                   >
                     Book Now →
                   </Button>
@@ -127,7 +134,9 @@ export function Contact() {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-va-gold">5 Day</div>
-                  <div className="text-va-dark">Guarantee</div>
+                  <div className="text-va-dark">
+                    Replacement guarantee anytime during the subscription time
+                  </div>
                 </div>
               </div>
             </div>
@@ -223,8 +232,13 @@ export function Contact() {
                 <p className="text-sm text-va-dark mb-4">
                   Prefer to schedule a call directly?
                 </p>
-                <Button 
-                  onClick={() => window.open('YOUR_CALENDLY_LINK', '_blank')}
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://calendly.com/youssef-vahorizon/30min",
+                      "_blank"
+                    )
+                  }
                   className="btn-secondary"
                   disabled={isSubmitting}
                 >
