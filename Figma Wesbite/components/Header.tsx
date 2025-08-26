@@ -72,8 +72,13 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button 
-              onClick={() => window.open('YOUR_CALENDLY_LINK', '_blank')}
+            <Button
+              onClick={() =>
+                window.open(
+                  "https://calendly.com/youssef-vahorizon/30min",
+                  "_blank"
+                )
+              }
               className="btn-primary"
             >
               Book 15-min Audit
@@ -134,8 +139,13 @@ export function Header() {
                 Contact
               </button>
               <div className="px-4 pt-2">
-                <Button 
-                  onClick={() => window.open('YOUR_CALENDLY_LINK', '_blank')}
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://calendly.com/youssef-vahorizon/30min",
+                      "_blank"
+                    )
+                  }
                   className="btn-primary w-full"
                 >
                   Book 15-min Audit

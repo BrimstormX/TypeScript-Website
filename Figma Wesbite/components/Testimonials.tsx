@@ -2,24 +2,24 @@ import { Card, CardContent } from "./ui/card";
 import { Star } from "lucide-react";
 
 export function Testimonials() {
-  const testimonials = [
+    const testimonials = [
     {
-      quote: "VA Horizon's cold caller Sarah helped me close 3 deals in the first month. The training was incredible and the results speak for themselves.",
-      author: "Mike Chen",
-      location: "Dallas, TX",
-      metric: "3 deals closed, first month"
+      quote: "After a few weeks my VA was handling follow-ups without me prompting. It felt like bringing on a reliable team member, not a temp.",
+      author: "Ahmed Hassan",
+      location: "Dearborn, MI",
+      metric: "Closed first deal in month 1"
     },
     {
-      quote: "Finally found a service that understands wholesaling. My VA handles all my skip tracing and appointment setting - freed up 25+ hours per week.",
-      author: "Jessica Rodriguez", 
+      quote: "Our caller Nader isn't flashy but he's consistent. Having him handle skip tracing and outreach gives me back hours every week.",
+      author: "Jessica Rodriguez",
       location: "Phoenix, AZ",
-      metric: "25+ hours saved weekly"
+      metric: "~20 hours saved weekly"
     },
     {
-      quote: "The CRM setup alone was worth the cost. Now everything runs like clockwork with my dedicated VA managing the entire pipeline.",
+      quote: "Junel set up our CRM and keeps it tidy. It's easier to see where leads are now, and follow-ups don't slip through the cracks.",
       author: "David Thompson",
-      location: "Atlanta, GA", 
-      metric: "Pipeline conversion up 40%"
+      location: "Atlanta, GA",
+      metric: "Pipeline visibility improved"
     }
   ];
 
@@ -63,12 +63,12 @@ export function Testimonials() {
         <div className="bg-va-navy text-white rounded-lg p-8 mt-16">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-va-gold mb-2">200+</div>
-              <div className="text-sm">Successful Placements</div>
+              <div className="text-3xl font-bold text-va-gold mb-2">50+</div>
+              <div className="text-sm">Active Clients</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-va-gold mb-2">87%</div>
-              <div className="text-sm">Pilot Success Rate</div>
+              <div className="text-3xl font-bold text-va-gold mb-2">95%</div>
+              <div className="text-sm">Client Satisfaction</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-va-gold mb-2">25+</div>

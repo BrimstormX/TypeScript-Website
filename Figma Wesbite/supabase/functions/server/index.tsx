@@ -49,7 +49,7 @@ app.post('/make-server-8b443622/contact', async (c) => {
 
     // Send email notification (placeholder for external integration)
     const emailData = {
-      to: 'hello@vahorizon.com',
+      to: 'Youssef@vahorizon.site',
       subject: `New Contact Form Submission - ${name}`,
       body: `
         New lead from VA Horizon website:
@@ -116,7 +116,7 @@ app.post('/make-server-8b443622/pilot', async (c) => {
 
     // Send priority email notification
     const emailData = {
-      to: 'hello@vahorizon.com',
+      to: 'Youssef@vahorizon.site',
       subject: `🔥 New Pilot Request - ${name}`,
       body: `
         HIGH PRIORITY: New pilot request from VA Horizon website:

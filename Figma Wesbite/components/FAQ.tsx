@@ -1,4 +1,11 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
+"use client";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
 
 export function FAQ() {
   const faqs = [
@@ -63,15 +70,24 @@ export function FAQ() {
           <div className="text-center mt-12">
             <p className="text-va-dark mb-4">Still have questions?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:hello@vahorizon.com" 
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 className="text-va-gold font-semibold hover:underline"
               >
                 Email us directly
-              </a>
+              </button>
               <span className="hidden sm:inline text-va-dark">or</span>
-              <button 
-                onClick={() => window.open('YOUR_CALENDLY_LINK', '_blank')}
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/youssef-vahorizon/30min",
+                    "_blank"
+                  )
+                }
                 className="text-va-gold font-semibold hover:underline"
               >
                 Book a call

@@ -1,13 +1,46 @@
 import { Button } from "./ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const vaNames = [
+    "Ahmed Hassan",
+    "Nader A.",
+    "Junel F.",
+    "Karim S.",
+    "Fatima R.",
+    "Omar B.",
+    "Leila H.",
+    "Hassan M.",
+    "Samir K.",
+    "Zainab L."
+  ];
+
+  const [vaName] = useState(
+    () => vaNames[Math.floor(Math.random() * vaNames.length)]
+  );
+
+  const [stats, setStats] = useState({ calls: 0, appointments: 0, lists: 0 });
+
+  useEffect(() => {
+    const updateStats = () => {
+      setStats({
+        calls: Math.floor(Math.random() * 100),
+        appointments: Math.floor(Math.random() * 10),
+        lists: Math.floor(Math.random() * 5)
+      });
+    };
+    updateStats();
+    const interval = setInterval(updateStats, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="bg-gradient-to-br from-white via-va-smoke to-white py-20 lg:py-32">
@@ -31,8 +64,13 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button 
-                onClick={() => window.open('YOUR_CALENDLY_LINK', '_blank')}
+              <Button
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/youssef-vahorizon/30min",
+                    "_blank"
+                  )
+                }
                 className="btn-primary flex items-center justify-center space-x-2 px-8 py-4 text-lg"
               >
                 <span>Book 15-min Audit</span>
@@ -77,15 +115,15 @@ export function Hero() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-3 bg-va-smoke rounded">
                     <span className="font-medium text-va-dark">Cold Calls Today</span>
-                    <span className="text-2xl font-bold text-va-navy">47</span>
+                    <span className="text-2xl font-bold text-va-navy">{stats.calls}</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-va-smoke rounded">
                     <span className="font-medium text-va-dark">Appointments Set</span>
-                    <span className="text-2xl font-bold text-va-gold">8</span>
+                    <span className="text-2xl font-bold text-va-gold">{stats.appointments}</span>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-va-smoke rounded">
                     <span className="font-medium text-va-dark">Lists Processed</span>
-                    <span className="text-2xl font-bold text-va-navy">3</span>
+                    <span className="text-2xl font-bold text-va-navy">{stats.lists}</span>
                   </div>
                 </div>
               </div>
@@ -96,7 +134,7 @@ export function Hero() {
               </div>
               
               <div className="absolute -bottom-4 -left-4 bg-white border border-va-divider rounded-lg px-4 py-2 shadow-lg">
-                <span className="text-xs text-va-dark">Your VA: Sarah M.</span>
+                <span className="text-xs text-va-dark">Your VA: {vaName}</span>
               </div>
             </div>
           </div>

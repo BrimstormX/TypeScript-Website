@@ -187,10 +187,15 @@ export function PilotOffer() {
                   <p className="text-xs text-va-dark">
                     Or schedule directly:
                   </p>
-                  <Button 
-                    variant="link" 
+                  <Button
+                    variant="link"
                     className="text-va-gold font-semibold p-0"
-                    onClick={() => window.open('YOUR_CALENDLY_LINK', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://calendly.com/youssef-vahorizon/30min",
+                        "_blank"
+                      )
+                    }
                     disabled={isSubmitting}
                   >
                     Book 15-min Audit
